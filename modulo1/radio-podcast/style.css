@@ -1,0 +1,40 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+
+    max-width: 500px;
+    margin: 20px;
+    padding: 10px;
+
+    background-color: #f0f0f5;
+    border: 1px solid lightgrey;
+    border-radius: 8px;
+}
+
+fieldset input {
+    margin: 15px;
+    border: 1px solid lightgrey;
+    border-radius: 8px;
+    width: 350px;
+    text-align: center;
+
+}
+
+.inputFrequency > input {
+    text-align: center;
+    width: 150px;
+    border-radius: 8px;
+}
+
+legend{
+    font-size: larger;
+    font-weight: 600;
+}
