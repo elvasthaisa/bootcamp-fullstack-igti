@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width", initial-scale=1.0"/>
+        <link rel="stylesheet" href="style.css"/>
+        <title>Trabalho1</title>
+    </head>
+    <body>
+        <p class="title">Playing with Colors</p>
+        <form>
+            <div class="colors">
+                <div class="red">
+                    <label for="red" class="redLabel">(R) Red:</label>
+                    <input type="range" id="inputRed" step="1" min="0" max="255">
+                    <input type="text" id="screenRed" readonly/> 
+                </div>
+
+                <div>
+                    <label for="green" class="green">(G) Green:</label>
+                    <input type="range" id="inputGreen" step="1" min="0" max="255">
+                    <input type="text" id="screenGreen" readonly/> 
+                </div>
+
+                <div>
+                    <label for="blue" class="blue">(B) Blue:</label>
+                    <input type="range" id="inputBlue" step="1" min="0" max="255">
+                    <input type="text" id="screenBlue" readonly/> 
+                </div>
+            </div>
+
+            <div id="square"></div>
+
+        </form>
+
+        <p class="signature">Made by Thaísa Elvas.</p>
+    <script src="./js/script.js"></script>
+    </body>
+</html>

@@ -10,7 +10,7 @@ window.addEventListener('load', () => {
         currentFrequency = event.target.value;
 
         let inputFrequency = document.querySelector('.inputFrequency');
-        inputFrequency.value = currentFrequency;
+        inputFrequency.value = currentFrequency + ' MHz';
 
         showPodcastsFromFrequency(currentFrequency);
     }
@@ -22,19 +22,36 @@ window.addEventListener('load', () => {
 
             if(currentPodcast.id === frequency) {
                 hasPodcast = true;
+
+                if(hasPodcast) {
+                    renderPodcast(currentPodcast);
+                }
             } 
-            
-            if(hasPodcast) {
-                divPodcasts.textContent = "Há podcast aqui";
-            } else {
+
+            if (!hasPodcast) {
                 divPodcasts.textContent = "Nenhum podcast encontrado";
             }
         }
     }
+
+    function renderPodcast(podcast) {
+        divPodcasts.innerHTML= '';
+
+        var img = document.createElement('img');
+        img.src = './img/' + podcast.img;
+        img.alt = 'Podcast ' + podcast.title;
+        img.title = 'Podcast ' + podcast.title;
+
+        var title = document.createElement('h2');
+        title.textContent = podcast.title;
+
+        var description = document.createElement('p');
+        description.textContent = podcast.description;
+
+        divPodcasts.appendChild(img);
+        divPodcasts.appendChild(title);
+        divPodcasts.appendChild(description);
+    }
 })
 
 
-// To do list
-// - inputRange gravar o valor dele à medida que mexo no slider - ok
-// - inputFrequency = inputFrequency (valor)
-// - Aparecer uma mensagem específica a cada vez que chegar nas frequências desejadas
